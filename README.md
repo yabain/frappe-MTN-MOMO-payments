@@ -2,7 +2,7 @@
 
 <p align="center">
   <br>
-  <img src="https://momo.mtn.com/wp-content/uploads/sites/15/2022/07/Group-360.png?w=360 360w, https://momo.mtn.com/wp-content/uploads/sites/15/2022/07/Group-360.png?w=150 150w, https://momo.mtn.com/wp-content/uploads/sites/15/2022/07/Group-360.png?w=300 300w" alt="logo" width="20%" />
+  <img src="https://nikulipe.com/wp-content/uploads/2024/07/MoMo-logo-1.png" alt="logo" width="30%" />
   <br><br>
   <i>A custom Frappe / ERPNext application for <b>MTN Mobile Money Cameroon</b> built in the spirit of the
 `frappe-mpsa-payments` app, but adapted to the <b>MTN MoMo Open API</b> flow.
