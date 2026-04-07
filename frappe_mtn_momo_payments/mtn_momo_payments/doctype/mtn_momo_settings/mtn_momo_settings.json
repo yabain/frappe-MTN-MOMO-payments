@@ -1,0 +1,229 @@
+{
+  "doctype": "DocType",
+  "name": "MTN MoMo Settings",
+  "module": "MTN MoMo Payments",
+  "engine": "InnoDB",
+  "custom": 0,
+  "is_submittable": 0,
+  "track_changes": 1,
+  "fields": [
+    {
+      "fieldname": "gateway_name",
+      "label": "Gateway Name",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "company",
+      "label": "Company",
+      "fieldtype": "Link",
+      "options": "Company",
+      "reqd": 1
+    },
+    {
+      "fieldname": "enabled",
+      "label": "Enabled",
+      "fieldtype": "Check",
+      "default": "1"
+    },
+    {
+      "fieldname": "is_sandbox",
+      "label": "Sandbox",
+      "fieldtype": "Check",
+      "default": "1"
+    },
+    {
+      "fieldname": "target_environment",
+      "label": "Target Environment",
+      "fieldtype": "Data",
+      "default": "sandbox",
+      "description": "Use sandbox for tests. For production, set the environment string provided by MTN for Cameroon."
+    },
+    {
+      "fieldname": "currency",
+      "label": "Currency",
+      "fieldtype": "Data",
+      "default": "XAF",
+      "reqd": 1
+    },
+    {
+      "fieldname": "country_code",
+      "label": "Country Code",
+      "fieldtype": "Data",
+      "default": "237",
+      "reqd": 1
+    },
+    {
+      "fieldname": "provider_callback_host",
+      "label": "Provider Callback Host",
+      "fieldtype": "Data",
+      "description": "Domain only, without protocol. Example: payments.example.com"
+    },
+    {
+      "fieldname": "callback_secret",
+      "label": "Callback Secret",
+      "fieldtype": "Password"
+    },
+    {
+      "fieldname": "collection_base_url",
+      "label": "Collection Base URL",
+      "fieldtype": "Data",
+      "default": "https://sandbox.momodeveloper.mtn.com",
+      "reqd": 1
+    },
+    {
+      "fieldname": "disbursement_base_url",
+      "label": "Disbursement Base URL",
+      "fieldtype": "Data",
+      "default": "https://sandbox.momodeveloper.mtn.com",
+      "reqd": 1
+    },
+    {
+      "fieldname": "provisioning_base_url",
+      "label": "Provisioning Base URL",
+      "fieldtype": "Data",
+      "default": "https://sandbox.momodeveloper.mtn.com",
+      "reqd": 1
+    },
+    {
+      "fieldname": "collection_subscription_key",
+      "label": "Collection Subscription Key",
+      "fieldtype": "Password",
+      "reqd": 1
+    },
+    {
+      "fieldname": "disbursement_subscription_key",
+      "label": "Disbursement Subscription Key",
+      "fieldtype": "Password",
+      "reqd": 1
+    },
+    {
+      "fieldname": "api_user",
+      "label": "API User",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "api_key",
+      "label": "API Key",
+      "fieldtype": "Password"
+    },
+    {
+      "fieldname": "collection_access_token",
+      "label": "Collection Access Token",
+      "fieldtype": "Small Text",
+      "hidden": 1
+    },
+    {
+      "fieldname": "collection_token_expires_at",
+      "label": "Collection Token Expires At",
+      "fieldtype": "Datetime",
+      "hidden": 1
+    },
+    {
+      "fieldname": "disbursement_access_token",
+      "label": "Disbursement Access Token",
+      "fieldtype": "Small Text",
+      "hidden": 1
+    },
+    {
+      "fieldname": "disbursement_token_expires_at",
+      "label": "Disbursement Token Expires At",
+      "fieldtype": "Datetime",
+      "hidden": 1
+    },
+    {
+      "fieldname": "mode_of_payment",
+      "label": "Mode of Payment",
+      "fieldtype": "Link",
+      "options": "Mode of Payment"
+    },
+    {
+      "fieldname": "received_account",
+      "label": "Received Account",
+      "fieldtype": "Link",
+      "options": "Account"
+    },
+    {
+      "fieldname": "disbursement_account",
+      "label": "Disbursement Account",
+      "fieldtype": "Link",
+      "options": "Account"
+    },
+    {
+      "fieldname": "auto_create_payment_entry",
+      "label": "Auto Create Payment Entry",
+      "fieldtype": "Check",
+      "default": "1"
+    },
+    {
+      "fieldname": "allow_website_checkout",
+      "label": "Allow Website Checkout",
+      "fieldtype": "Check",
+      "default": "1"
+    },
+    {
+      "fieldname": "allow_disbursement",
+      "label": "Allow Disbursement",
+      "fieldtype": "Check",
+      "default": "1"
+    },
+    {
+      "fieldname": "allow_refund",
+      "label": "Allow Refund",
+      "fieldtype": "Check",
+      "default": "1"
+    },
+    {
+      "fieldname": "last_balance_payload",
+      "label": "Last Balance Payload",
+      "fieldtype": "Long Text",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1
+    }
+  ],
+  "title_field": "gateway_name",
+  "search_fields": "gateway_name,company",
+  "autoname": "field:gateway_name",
+  "field_order": [
+    "gateway_name",
+    "company",
+    "enabled",
+    "is_sandbox",
+    "target_environment",
+    "currency",
+    "country_code",
+    "provider_callback_host",
+    "callback_secret",
+    "collection_base_url",
+    "disbursement_base_url",
+    "provisioning_base_url",
+    "collection_subscription_key",
+    "disbursement_subscription_key",
+    "api_user",
+    "api_key",
+    "collection_access_token",
+    "collection_token_expires_at",
+    "disbursement_access_token",
+    "disbursement_token_expires_at",
+    "mode_of_payment",
+    "received_account",
+    "disbursement_account",
+    "auto_create_payment_entry",
+    "allow_website_checkout",
+    "allow_disbursement",
+    "allow_refund",
+    "last_balance_payload"
+  ]
+}

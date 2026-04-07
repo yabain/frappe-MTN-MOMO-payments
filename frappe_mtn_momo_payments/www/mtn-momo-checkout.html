@@ -1,0 +1,50 @@
+{% extends "templates/web.html" %}
+{% block page_content %}
+<div class="container" style="max-width: 620px; margin-top: 2rem;">
+  <h2>MTN MoMo Checkout</h2>
+  <p>Use this simple page as a baseline website checkout for MTN Mobile Money.</p>
+  <form id="mtn-momo-checkout-form">
+    <div class="mb-3">
+      <label>Settings</label>
+      <input class="form-control" id="settings" name="settings" value="{{ frappe.form_dict.settings or '' }}" required>
+    </div>
+    <div class="mb-3">
+      <label>Mobile Number</label>
+      <input class="form-control" id="phone_number" name="phone_number" required>
+    </div>
+    <div class="mb-3">
+      <label>Amount</label>
+      <input class="form-control" id="amount" name="amount" type="number" step="0.01" required>
+    </div>
+    <div class="mb-3">
+      <label>Reference DocType</label>
+      <input class="form-control" id="reference_doctype" name="reference_doctype" value="{{ frappe.form_dict.reference_doctype or '' }}">
+    </div>
+    <div class="mb-3">
+      <label>Reference Name</label>
+      <input class="form-control" id="reference_name" name="reference_name" value="{{ frappe.form_dict.reference_name or '' }}">
+    </div>
+    <button class="btn btn-primary" type="submit">Request Payment</button>
+  </form>
+  <pre id="checkout-result" style="margin-top: 1rem;"></pre>
+</div>
+<script>
+  document.getElementById('mtn-momo-checkout-form').addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const payload = {
+      settings: document.getElementById('settings').value,
+      phone_number: document.getElementById('phone_number').value,
+      amount: document.getElementById('amount').value,
+      reference_doctype: document.getElementById('reference_doctype').value,
+      reference_name: document.getElementById('reference_name').value,
+    };
+    const res = await fetch('/api/method/frappe_mtn_momo_payments.api.collections.start_web_checkout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const data = await res.json();
+    document.getElementById('checkout-result').textContent = JSON.stringify(data, null, 2);
+  });
+</script>
+{% endblock %}

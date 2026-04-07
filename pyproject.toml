@@ -1,0 +1,19 @@
+[project]
+name = "frappe_mtn_momo_payments"
+authors = [{ name = "OpenAI for user delivery" }]
+description = "Frappe MTN MoMo Payments for Cameroon"
+requires-python = ">=3.10"
+readme = "README.md"
+dynamic = ["version"]
+dependencies = [
+    "requests>=2.28.0",
+]
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.isort]
+profile = "black"
+known_frappe = "frappe"
+sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FRAPPE", "FIRSTPARTY", "LOCALFOLDER"]

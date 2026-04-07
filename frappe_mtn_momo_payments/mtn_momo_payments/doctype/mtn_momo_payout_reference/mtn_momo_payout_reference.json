@@ -1,0 +1,112 @@
+{
+  "doctype": "DocType",
+  "name": "MTN MoMo Payout Reference",
+  "module": "MTN MoMo Payments",
+  "engine": "InnoDB",
+  "custom": 0,
+  "is_submittable": 0,
+  "track_changes": 1,
+  "fields": [
+    {
+      "fieldname": "recipient_name",
+      "label": "Recipient Name",
+      "fieldtype": "Data",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "recipient_mobile",
+      "label": "Recipient Mobile",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "amount",
+      "label": "Amount",
+      "fieldtype": "Currency",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "currency",
+      "label": "Currency",
+      "fieldtype": "Data",
+      "default": "XAF"
+    },
+    {
+      "fieldname": "reference_doctype",
+      "label": "Reference DocType",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "reference_name",
+      "label": "Reference Name",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "party_type",
+      "label": "Party Type",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "party",
+      "label": "Party",
+      "fieldtype": "Dynamic Link",
+      "options": "party_type"
+    },
+    {
+      "fieldname": "external_id",
+      "label": "External ID",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "transaction",
+      "label": "Transaction",
+      "fieldtype": "Link",
+      "options": "MTN MoMo Transaction"
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Data",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "reason",
+      "label": "Reason",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "payment_entry",
+      "label": "Payment Entry",
+      "fieldtype": "Link",
+      "options": "Payment Entry"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ],
+  "istable": 1,
+  "editable_grid": 1,
+  "field_order": [
+    "recipient_name",
+    "recipient_mobile",
+    "amount",
+    "currency",
+    "reference_doctype",
+    "reference_name",
+    "party_type",
+    "party",
+    "external_id",
+    "transaction",
+    "status",
+    "reason",
+    "payment_entry"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "doctype": "DocType",
+  "name": "MTN MoMo Payout Batch",
+  "module": "MTN MoMo Payments",
+  "engine": "InnoDB",
+  "custom": 0,
+  "is_submittable": 1,
+  "track_changes": 1,
+  "fields": [
+    {
+      "fieldname": "company",
+      "label": "Company",
+      "fieldtype": "Link",
+      "options": "Company",
+      "reqd": 1
+    },
+    {
+      "fieldname": "settings",
+      "label": "Settings",
+      "fieldtype": "Link",
+      "options": "MTN MoMo Settings",
+      "reqd": 1
+    },
+    {
+      "fieldname": "mode_of_payment",
+      "label": "Mode of Payment",
+      "fieldtype": "Link",
+      "options": "Mode of Payment"
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Queued\nPending\nPartial\nPaid\nFailed",
+      "default": "Queued",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "total_amount",
+      "label": "Total Amount",
+      "fieldtype": "Currency",
+      "read_only": 1
+    },
+    {
+      "fieldname": "auto_submit_on_submit",
+      "label": "Auto Submit On Submit",
+      "fieldtype": "Check",
+      "default": "1"
+    },
+    {
+      "fieldname": "remarks",
+      "label": "Remarks",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "last_sync_at",
+      "label": "Last Sync At",
+      "fieldtype": "Datetime"
+    },
+    {
+      "fieldname": "references",
+      "label": "References",
+      "fieldtype": "Table",
+      "options": "MTN MoMo Payout Reference",
+      "reqd": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1
+    }
+  ],
+  "title_field": "name",
+  "search_fields": "company,status",
+  "field_order": [
+    "company",
+    "settings",
+    "mode_of_payment",
+    "status",
+    "total_amount",
+    "auto_submit_on_submit",
+    "remarks",
+    "last_sync_at",
+    "references"
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "doctype": "DocType",
+  "name": "MTN MoMo Transaction",
+  "module": "MTN MoMo Payments",
+  "engine": "InnoDB",
+  "custom": 0,
+  "is_submittable": 0,
+  "track_changes": 1,
+  "fields": [
+    {
+      "fieldname": "settings",
+      "label": "Settings",
+      "fieldtype": "Link",
+      "options": "MTN MoMo Settings",
+      "reqd": 1
+    },
+    {
+      "fieldname": "transaction_type",
+      "label": "Transaction Type",
+      "fieldtype": "Select",
+      "options": "Collection\nTransfer\nRefund",
+      "reqd": 1
+    },
+    {
+      "fieldname": "direction",
+      "label": "Direction",
+      "fieldtype": "Select",
+      "options": "In\nOut",
+      "reqd": 1
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Queued\nPending\nProcessing\nSuccess\nFailed\nRejected\nTimeout\nCancelled",
+      "default": "Queued",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "amount",
+      "label": "Amount",
+      "fieldtype": "Currency",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "currency",
+      "label": "Currency",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "payer_party_id_type",
+      "label": "Payer Party ID Type",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "payer_party_id",
+      "label": "Payer Party ID",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "payee_party_id_type",
+      "label": "Payee Party ID Type",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "payee_party_id",
+      "label": "Payee Party ID",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "external_id",
+      "label": "External ID",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "request_reference_id",
+      "label": "Request Reference ID",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "refund_reference_id",
+      "label": "Refund Reference ID",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "momo_status",
+      "label": "MoMo Status",
+      "fieldtype": "Data",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "reason",
+      "label": "Reason",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "reference_doctype",
+      "label": "Reference DocType",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "reference_name",
+      "label": "Reference Name",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "party_type",
+      "label": "Party Type",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "party",
+      "label": "Party",
+      "fieldtype": "Dynamic Link",
+      "options": "party_type"
+    },
+    {
+      "fieldname": "company",
+      "label": "Company",
+      "fieldtype": "Link",
+      "options": "Company"
+    },
+    {
+      "fieldname": "mode_of_payment",
+      "label": "Mode of Payment",
+      "fieldtype": "Link",
+      "options": "Mode of Payment"
+    },
+    {
+      "fieldname": "payment_entry",
+      "label": "Payment Entry",
+      "fieldtype": "Link",
+      "options": "Payment Entry"
+    },
+    {
+      "fieldname": "is_reconciled",
+      "label": "Is Reconciled",
+      "fieldtype": "Check",
+      "default": "0"
+    },
+    {
+      "fieldname": "sandbox",
+      "label": "Sandbox",
+      "fieldtype": "Check",
+      "default": "1"
+    },
+    {
+      "fieldname": "next_poll_at",
+      "label": "Next Poll At",
+      "fieldtype": "Datetime"
+    },
+    {
+      "fieldname": "last_polled_at",
+      "label": "Last Polled At",
+      "fieldtype": "Datetime"
+    },
+    {
+      "fieldname": "disbursement_batch",
+      "label": "Disbursement Batch",
+      "fieldtype": "Link",
+      "options": "MTN MoMo Payout Batch"
+    },
+    {
+      "fieldname": "api_response",
+      "label": "API Response",
+      "fieldtype": "Long Text",
+      "read_only": 1
+    },
+    {
+      "fieldname": "status_payload",
+      "label": "Status Payload",
+      "fieldtype": "Long Text",
+      "read_only": 1
+    },
+    {
+      "fieldname": "webhook_payload",
+      "label": "Webhook Payload",
+      "fieldtype": "Long Text",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1
+    }
+  ],
+  "title_field": "request_reference_id",
+  "search_fields": "request_reference_id,external_id,reference_name",
+  "field_order": [
+    "settings",
+    "transaction_type",
+    "direction",
+    "status",
+    "amount",
+    "currency",
+    "payer_party_id_type",
+    "payer_party_id",
+    "payee_party_id_type",
+    "payee_party_id",
+    "external_id",
+    "request_reference_id",
+    "refund_reference_id",
+    "momo_status",
+    "reason",
+    "reference_doctype",
+    "reference_name",
+    "party_type",
+    "party",
+    "company",
+    "mode_of_payment",
+    "payment_entry",
+    "is_reconciled",
+    "sandbox",
+    "next_poll_at",
+    "last_polled_at",
+    "disbursement_batch",
+    "api_response",
+    "status_payload",
+    "webhook_payload"
+  ]
+}
