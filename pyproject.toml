@@ -1,7 +1,7 @@
 [project]
 name = "mtn_momo_payments"
 authors = [{ name = "OpenAI for user delivery" }]
-description = "Frappe MTN MoMo Payments for Cameroon"
+description = "Frappe MTN MoMo Payments for XAF"
 requires-python = ">=3.10"
 readme = "README.md"
 dynamic = ["version"]

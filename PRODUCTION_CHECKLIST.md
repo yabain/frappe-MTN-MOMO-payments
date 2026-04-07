@@ -1,4 +1,4 @@
-# Production checklist — MTN MoMo Cameroon
+# Production checklist — MTN MoMo XAF
 
 ## Before first live transaction
 - Confirm your MTN MoMo business account is enabled for the required products:
@@ -24,7 +24,7 @@
 7. Sandbox refund test
 
 ## Cameroon-specific items to verify with MTN
-- Production environment code for Cameroon
+- Production environment code
 - Any account-level restrictions on collection vs disbursement
 - Phone number formatting expected in production
 - Callback IP / hostname allow-list requirements

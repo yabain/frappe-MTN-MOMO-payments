@@ -1,7 +1,7 @@
 app_name = "mtn_momo_payments"
 app_title = "MTN MoMo Payments"
 app_publisher = "OpenAI"
-app_description = "MTN Mobile Money Cameroon integration for ERPNext"
+app_description = "MTN Mobile Money XAF integration for ERPNext"
 app_email = "support@example.com"
 app_license = "mit"
 required_apps = ["erpnext"]

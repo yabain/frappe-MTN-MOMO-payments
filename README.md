@@ -1,10 +1,10 @@
-<h1 align="center">Frappe MTN MoMo Payments (Cameroon)</h1>
+<h1 align="center">Frappe MTN MoMo Payments (XAF)</h1>
 
 <p align="center">
   <br>
   <img src="https://nikulipe.com/wp-content/uploads/2024/07/MoMo-logo-1.png" alt="logo" width="30%" />
   <br><br>
-  <i>A custom Frappe / ERPNext application for <b>MTN Mobile Money Cameroon</b> built in the spirit of the
+  <i>A custom Frappe / ERPNext application for <b>MTN Mobile Money (XAF) Cameroon</b> built in the spirit of the
 `frappe-mpsa-payments` app, but adapted to the <b>MTN MoMo Open API</b> flow.
     <br>...</i>
 
@@ -81,7 +81,7 @@ If you prefer a classic git workflow, unzip the project somewhere, move the fold
 
 ## First setup
 1. Open **MTN MoMo Settings**.
-2. Create one record for your Cameroon business.
+2. Create one record for your business.
 3. Fill:
    - Company
    - Target Environment (`sandbox` or your production environment string from MTN)
