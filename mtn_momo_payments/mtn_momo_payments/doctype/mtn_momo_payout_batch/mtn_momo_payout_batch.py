@@ -4,8 +4,8 @@ import frappe
 from frappe.model.document import Document
 from frappe.utils import flt, now_datetime
 
-from frappe_mtn_momo_payments.api.disbursement import _poll_disbursement_transaction, _transfer
-from frappe_mtn_momo_payments.utils.helpers import normalize_phone_number
+from mtn_momo_payments.api.disbursement import _poll_disbursement_transaction, _transfer
+from mtn_momo_payments.utils.helpers import normalize_phone_number
 
 
 class MTNMoMoPayoutBatch(Document):

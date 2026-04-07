@@ -3,8 +3,8 @@ from __future__ import annotations
 import frappe
 from frappe.utils import now_datetime
 
-from frappe_mtn_momo_payments.api.collections import _poll_collection_transaction
-from frappe_mtn_momo_payments.api.disbursement import _poll_disbursement_transaction, _poll_refund_transaction
+from mtn_momo_payments.api.collections import _poll_collection_transaction
+from mtn_momo_payments.api.disbursement import _poll_disbursement_transaction, _poll_refund_transaction
 
 
 def poll_pending_transactions() -> None:

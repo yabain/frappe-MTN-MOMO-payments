@@ -38,7 +38,7 @@
       reference_doctype: document.getElementById('reference_doctype').value,
       reference_name: document.getElementById('reference_name').value,
     };
-    const res = await fetch('/api/method/frappe_mtn_momo_payments.api.collections.start_web_checkout', {
+    const res = await fetch('/api/method/mtn_momo_payments.api.collections.start_web_checkout', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)

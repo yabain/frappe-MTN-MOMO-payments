@@ -7,7 +7,7 @@ import requests
 import frappe
 from frappe.utils import add_to_date, now_datetime
 
-from frappe_mtn_momo_payments.utils.helpers import safe_json_dumps
+from mtn_momo_payments.utils.helpers import safe_json_dumps
 
 
 class MTNMoMoClient:

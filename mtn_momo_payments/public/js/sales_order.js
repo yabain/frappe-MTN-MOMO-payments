@@ -3,7 +3,7 @@ frappe.ui.form.on('Sales Order', {
     if (frm.is_new()) return;
     frm.add_custom_button(__('MTN MoMo Request Payment'), () => {
       frappe.call({
-        method: 'frappe_mtn_momo_payments.api.common.get_active_settings',
+        method: 'mtn_momo_payments.api.common.get_active_settings',
         args: { company: frm.doc.company },
         callback(r) {
           const s = r.message;
@@ -17,7 +17,7 @@ frappe.ui.form.on('Sales Order', {
             primary_action_label: __('Send Request'),
             primary_action(values) {
               frappe.call({
-                method: 'frappe_mtn_momo_payments.api.collections.request_payment_for_reference',
+                method: 'mtn_momo_payments.api.collections.request_payment_for_reference',
                 args: {
                   settings: values.settings,
                   reference_doctype: 'Sales Order',

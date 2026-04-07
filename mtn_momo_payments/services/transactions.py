@@ -5,8 +5,8 @@ from typing import Any
 import frappe
 from frappe.utils import now_datetime
 
-from frappe_mtn_momo_payments.services.reconciliation import create_payment_entry_for_transaction
-from frappe_mtn_momo_payments.utils.helpers import extract_request_status, next_poll_after, safe_json_dumps
+from mtn_momo_payments.services.reconciliation import create_payment_entry_for_transaction
+from mtn_momo_payments.utils.helpers import extract_request_status, next_poll_after, safe_json_dumps
 
 
 def apply_status_payload(tx, payload: dict[str, Any], source: str = "poll"):

@@ -1,0 +1,58 @@
+{
+  "doctype": "Workspace",
+  "name": "MTN MoMo Payments",
+  "title": "MTN MoMo Payments",
+  "label": "MTN MoMo Payments",
+  "module": "MTN MoMo Payments",
+  "public": 1,
+  "is_hidden": 0,
+  "for_user": "",
+  "parent_page": "",
+  "restrict_to_domain": "",
+  "roles": [],
+  "sequence_id": 90,
+  "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Configuration\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"MTN MoMo Settings\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"MTN MoMo Transaction\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"MTN MoMo Payout Batch\", \"col\": 4}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Operations\", \"level\": 4, \"col\": 12}}, {\"type\": \"card\", \"data\": {\"card_name\": \"MTN MoMo\", \"col\": 4}}]",
+  "links": [
+    {
+      "label": "MTN MoMo",
+      "type": "Card Break",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "MTN MoMo Settings",
+      "type": "Link",
+      "link_type": "DocType",
+      "link_to": "MTN MoMo Settings",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0,
+      "dependencies": ""
+    },
+    {
+      "label": "MTN MoMo Transaction",
+      "type": "Link",
+      "link_type": "DocType",
+      "link_to": "MTN MoMo Transaction",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0,
+      "dependencies": ""
+    },
+    {
+      "label": "MTN MoMo Payout Batch",
+      "type": "Link",
+      "link_type": "DocType",
+      "link_to": "MTN MoMo Payout Batch",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0,
+      "dependencies": ""
+    }
+  ]
+}

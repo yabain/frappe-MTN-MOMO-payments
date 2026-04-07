@@ -1,5 +1,5 @@
 [project]
-name = "frappe_mtn_momo_payments"
+name = "mtn_momo_payments"
 authors = [{ name = "OpenAI for user delivery" }]
 description = "Frappe MTN MoMo Payments for Cameroon"
 requires-python = ">=3.10"

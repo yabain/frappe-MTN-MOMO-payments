@@ -3,8 +3,8 @@ from __future__ import annotations
 import frappe
 from frappe.model.document import Document
 
-from frappe_mtn_momo_payments.services.client import MTNMoMoClient
-from frappe_mtn_momo_payments.utils.helpers import callback_token
+from mtn_momo_payments.services.client import MTNMoMoClient
+from mtn_momo_payments.utils.helpers import callback_token
 
 
 class MTNMoMoSettings(Document):

@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import frappe
 
-from frappe_mtn_momo_payments.services.transactions import apply_callback_payload
-from frappe_mtn_momo_payments.utils.helpers import coerce_json
+from mtn_momo_payments.services.transactions import apply_callback_payload
+from mtn_momo_payments.utils.helpers import coerce_json
 
 
 def _validate_token(settings_name: str, token: str | None):

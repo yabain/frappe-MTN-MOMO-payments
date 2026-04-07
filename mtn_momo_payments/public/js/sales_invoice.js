@@ -14,7 +14,7 @@ frappe.ui.form.on('Sales Invoice', {
 
 function open_mtn_momo_collection_dialog(opts) {
   frappe.call({
-    method: 'frappe_mtn_momo_payments.api.common.get_active_settings',
+    method: 'mtn_momo_payments.api.common.get_active_settings',
     args: { company: opts.company },
     callback(r) {
       const s = r.message;
@@ -30,7 +30,7 @@ function open_mtn_momo_collection_dialog(opts) {
         primary_action_label: __('Send Request'),
         primary_action(values) {
           frappe.call({
-            method: 'frappe_mtn_momo_payments.api.collections.request_payment_for_reference',
+            method: 'mtn_momo_payments.api.collections.request_payment_for_reference',
             args: {
               settings: values.settings,
               reference_doctype: opts.reference_doctype,

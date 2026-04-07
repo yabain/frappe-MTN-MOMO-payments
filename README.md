@@ -70,9 +70,9 @@ Get started with ERPNext, learn the fundamentals and explore advanced topics on 
 
 ```bash
 cd $BENCH_PATH/apps
-unzip /path/to/frappe_mtn_momo_payments.zip -d .
+unzip /path/to/mtn_momo_payments.zip -d .
 cd $BENCH_PATH
-bench --site your-site.local install-app frappe_mtn_momo_payments
+bench --site your-site.local install-app mtn_momo_payments
 bench --site your-site.local migrate
 bench restart
 ```
@@ -106,18 +106,18 @@ Visit:
 - `/mtn-momo-checkout`
 
 The page posts to the whitelisted method:
-- `frappe_mtn_momo_payments.api.collections.start_web_checkout`
+- `mtn_momo_payments.api.collections.start_web_checkout`
 
 ## Main API methods
-- `frappe_mtn_momo_payments.api.collections.request_payment_for_reference`
-- `frappe_mtn_momo_payments.api.collections.request_payment`
-- `frappe_mtn_momo_payments.api.collections.get_collection_status`
-- `frappe_mtn_momo_payments.api.disbursement.transfer_for_reference`
-- `frappe_mtn_momo_payments.api.disbursement.get_disbursement_status`
-- `frappe_mtn_momo_payments.api.disbursement.refund_transaction`
-- `frappe_mtn_momo_payments.api.webhooks.collection_callback`
-- `frappe_mtn_momo_payments.api.webhooks.disbursement_callback`
-- `frappe_mtn_momo_payments.api.webhooks.refund_callback`
+- `mtn_momo_payments.api.collections.request_payment_for_reference`
+- `mtn_momo_payments.api.collections.request_payment`
+- `mtn_momo_payments.api.collections.get_collection_status`
+- `mtn_momo_payments.api.disbursement.transfer_for_reference`
+- `mtn_momo_payments.api.disbursement.get_disbursement_status`
+- `mtn_momo_payments.api.disbursement.refund_transaction`
+- `mtn_momo_payments.api.webhooks.collection_callback`
+- `mtn_momo_payments.api.webhooks.disbursement_callback`
+- `mtn_momo_payments.api.webhooks.refund_callback`
 
 ## What you will still likely tailor in production
 - The exact `target_environment` string for Cameroon production

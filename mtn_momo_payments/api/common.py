@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import frappe
 
-from frappe_mtn_momo_payments.utils.helpers import get_enabled_settings
+from mtn_momo_payments.utils.helpers import get_enabled_settings
 
 
 @frappe.whitelist()

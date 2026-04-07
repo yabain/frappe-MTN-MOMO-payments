@@ -5,9 +5,9 @@ from typing import Any
 import frappe
 from frappe.utils import flt
 
-from frappe_mtn_momo_payments.services.client import MTNMoMoClient
-from frappe_mtn_momo_payments.services.transactions import apply_status_payload
-from frappe_mtn_momo_payments.utils.helpers import (
+from mtn_momo_payments.services.client import MTNMoMoClient
+from mtn_momo_payments.services.transactions import apply_status_payload
+from mtn_momo_payments.utils.helpers import (
     build_callback_url,
     get_enabled_settings,
     make_uuid,
@@ -51,7 +51,7 @@ def _transfer(tx, payer_message: str = "ERPNext payout", payee_note: str = "ERPN
     client = MTNMoMoClient(settings_doc)
     callback_url = build_callback_url(
         settings_doc,
-        "frappe_mtn_momo_payments.api.webhooks.disbursement_callback",
+        "mtn_momo_payments.api.webhooks.disbursement_callback",
         tx.request_reference_id,
     )
     payload = {
@@ -164,7 +164,7 @@ def refund_transaction(transaction_name: str, amount: float | None = None, payer
     client = MTNMoMoClient(settings_doc)
     callback_url = build_callback_url(
         settings_doc,
-        "frappe_mtn_momo_payments.api.webhooks.refund_callback",
+        "mtn_momo_payments.api.webhooks.refund_callback",
         refund_tx.request_reference_id,
     )
     payload = {
