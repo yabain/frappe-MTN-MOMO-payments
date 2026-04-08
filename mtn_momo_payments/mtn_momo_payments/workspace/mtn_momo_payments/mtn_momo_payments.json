@@ -11,10 +11,11 @@
   "restrict_to_domain": "",
   "roles": [],
   "sequence_id": 90,
-  "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Configuration\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"MTN MoMo Settings\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"MTN MoMo Transaction\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"MTN MoMo Payout Batch\", \"col\": 4}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Operations\", \"level\": 4, \"col\": 12}}, {\"type\": \"card\", \"data\": {\"card_name\": \"MTN MoMo\", \"col\": 4}}]",
+  "icon": "money-coins",
+  "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Configuration\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"MTN MoMo Settings\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"MTN MoMo Transaction\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"MTN MoMo Payout Batch\", \"col\": 4}}]",
   "links": [
     {
-      "label": "MTN MoMo",
+      "label": "MTN MoMo XAF",
       "type": "Card Break",
       "hidden": 0,
       "is_query_report": 0,

@@ -29,6 +29,6 @@ add_to_apps_screen = [
         "name": "mtn_momo_payments",
         "logo": "/assets/mtn_momo_payments/images/icon.svg",
         "title": "MTN MoMo Payments",
-        "route": "/app/mtn-momo-payments",
+        "route": "/app/mtn-momo-settings",
     }
 ]
