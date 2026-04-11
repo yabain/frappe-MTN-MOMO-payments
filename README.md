@@ -126,10 +126,6 @@ The page posts to the whitelisted method:
 - Website storefront integration specifics
 - MTN production callback / entitlement validation
 
-## License note
-This project is delivered as an original app inspired by the public structure and feature ideas of the referenced M-Pesa app.
-You should still perform your own legal review before distributing commercially.
-
 
 
 ## Stay in touch
